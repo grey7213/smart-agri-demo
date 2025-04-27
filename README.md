@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 智农参谋 Demo - React 版本
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个使用 React 构建的智农参谋演示应用，展示了全链条智慧农业服务平台的功能和价值。
 
-## Available Scripts
+## 项目结构
 
-In the project directory, you can run:
+```
+/
+├── components/                # 组件目录
+│   ├── Header.js             # 头部组件
+│   ├── Footer.js             # 底部组件
+│   ├── ProducerView.js       # 生产者视角组件
+│   ├── DistributorView.js    # 经销商视角组件
+│   ├── LogisticsView.js      # 物流视角组件
+│   ├── ConsumerView.js       # 消费者视角组件
+│   └── *.css                 # 各组件对应的样式文件
+├── assets/                    # 静态资源目录
+├── App.js                     # 主应用组件
+├── App.css                    # 主应用样式
+├── data.js                    # 模拟数据
+├── index.js                   # 应用入口
+└── README.md                  # 项目说明
+```
 
-### `npm start`
+## 如何运行
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. 首先，确保你的系统中已安装 Node.js 和 npm。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. 创建一个新的 React 应用：
 
-### `npm test`
+   ```bash
+   npx create-react-app smart-agri-demo
+   cd smart-agri-demo
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. 将本项目中的所有文件复制到新创建的 React 应用中，覆盖原有文件。
 
-### `npm run build`
+4. 安装依赖并启动应用：
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. 浏览器将自动打开并访问 `http://localhost:3000`，你将看到智农参谋 Demo 的界面。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 功能说明
 
-### `npm run eject`
+本演示应用展示了智农参谋平台针对四类用户的不同功能：
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **生产者视角**：展示市场需求趋势、价格参考和智能定价建议。
+2. **经销商视角**：显示可整合的农产品供应信息。
+3. **物流视角**：提供配送路径优化和智能温控监测。
+4. **消费者视角**：展示产品溯源信息，确保食品安全和透明度。
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+所有数据均为模拟数据，用于演示效果。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 技术特点
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 使用 React 函数式组件和 Hooks 构建
+- 基于组件化设计，每个用户视角都是独立组件
+- 使用 CSS 实现响应式布局，适配不同设备
+- 采用统一的绿色主题，符合农业产品特性 

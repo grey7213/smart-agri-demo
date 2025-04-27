@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f7f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Common section styling */
+.dashboard-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dashboard-section:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.section-header {
+  background-color: #f8fdf8;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.section-header h2 {
+  color: #2e7d32;
+  font-size: 20px;
+  margin: 0;
+}
+
+.user-tag {
+  background-color: #2e7d32;
   color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.section-content {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-section {
+  margin-bottom: 25px;
 }
+
+.info-section h3 {
+  color: #2e7d32;
+  font-size: 18px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.info-section h4 {
+  color: #2e7d32;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.info-footer {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.data-source {
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .user-tag {
+    align-self: flex-start;
+  }
+} 

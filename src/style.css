@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.section-header {
+    background-color: #f8fdf8;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    color: #2e7d32;
+    font-size: 20px;
+    margin: 0;
+}
+
+.user-tag {
+    background-color: #2e7d32;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+/* Producer Section */
+.selection-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.info-display {
+    min-height: 300px;
+}
+
+.placeholder-message {
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+    padding: 80px 0;
+}
+
+.info-section {
+    margin-bottom: 25px;
+}
+
+.info-section h3 {
+    color: #2e7d32;
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.info-section h4 {
+    color: #2e7d32;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.info-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.data-source {
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+    font-style: italic;
+}
+
+/* Distributor Section */
+.supply-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.supply-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-left: 4px solid #2e7d32;
+}
+
+.supply-item {
+    margin-right: 15px;
+}
+
+.status-badge {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.action-note {
+    color: #555;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Logistics Section */
+.logistics-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.route-optimization, 
+.temperature-control {
+    flex: 1;
+    min-width: 300px;
+}
+
+.route-map {
+    margin-top: 15px;
+    height: 200px;
+    background-color: #f0f7f0;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.map-placeholder {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.map-point {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+.point-a {
+    background-color: #4caf50;
+    top: 50px;
+    left: 70px;
+}
+
+.point-b {
+    background-color: #f44336;
+    bottom: 60px;
+    right: 80px;
+}
+
+.route-line {
+    position: absolute;
+    height: 4px;
+    background-color: #2e7d32;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: rotate(15deg);
+}
+
+.temp-status {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.normal {
+    background-color: #e8f5e9;
+}
+
+.warning {
+    background-color: #fff8e1;
+}
+
+.vehicle-id {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.temp-reading {
+    margin-right: 10px;
+}
+
+/* Consumer Section */
+.traceability-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+}
+
+.qr-inner {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.qr-inner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, black 10px, transparent 10px),
+        linear-gradient(to bottom, black 10px, transparent 10px),
+        linear-gradient(to right, black 10px, transparent 10px),
+        linear-gradient(to bottom, black 10px, transparent 10px);
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-size: 35px 3px, 3px 35px, 35px 3px, 3px 35px;
+    background-repeat: no-repeat;
+}
+
+.qr-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.traceability-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.trace-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.trace-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.certification-tag {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .logistics-row, 
+    .traceability-content {
+        flex-direction: column;
+    }
+    
+    .supply-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .supply-item {
+        margin-right: 0;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .user-tag {
+        align-self: flex-start;
+    }
+} 

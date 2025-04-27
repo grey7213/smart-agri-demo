@@ -1,0 +1,96 @@
+.logistics-section .placeholder-message {
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  padding: 80px 0;
+}
+
+.logistics-section .logistics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logistics-section .route-optimization, 
+.logistics-section .temperature-control {
+  flex: 1;
+  min-width: 300px;
+}
+
+.logistics-section .route-map {
+  margin-top: 15px;
+  height: 200px;
+  background-color: #f0f7f0;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.logistics-section .map-placeholder {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.logistics-section .map-point {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+}
+
+.logistics-section .point-a {
+  background-color: #4caf50;
+  top: 50px;
+  left: 70px;
+}
+
+.logistics-section .point-b {
+  background-color: #f44336;
+  bottom: 60px;
+  right: 80px;
+}
+
+.logistics-section .route-line {
+  position: absolute;
+  height: 4px;
+  background-color: #2e7d32;
+  width: 60%;
+  top: 50%;
+  left: 20%;
+  transform: rotate(15deg);
+}
+
+.logistics-section .temp-status {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.logistics-section .normal {
+  background-color: #e8f5e9;
+}
+
+.logistics-section .warning {
+  background-color: #fff8e1;
+}
+
+.logistics-section .vehicle-id {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logistics-section .temp-reading {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .logistics-section .logistics-row {
+    flex-direction: column;
+  }
+} 
